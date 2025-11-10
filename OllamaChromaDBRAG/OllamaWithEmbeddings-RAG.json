@@ -1,0 +1,1902 @@
+{
+  "data": {
+    "edges": [
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "OllamaEmbeddings",
+            "id": "OllamaEmbeddings-N24Tc",
+            "name": "embeddings",
+            "output_types": [
+              "Embeddings"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "embedding",
+            "id": "Chroma-tsajj",
+            "inputTypes": [
+              "Embeddings"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__OllamaEmbeddings-N24Tc{œdataTypeœ:œOllamaEmbeddingsœ,œidœ:œOllamaEmbeddings-N24Tcœ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}-Chroma-tsajj{œfieldNameœ:œembeddingœ,œidœ:œChroma-tsajjœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "OllamaEmbeddings-N24Tc",
+        "sourceHandle": "{œdataTypeœ:œOllamaEmbeddingsœ,œidœ:œOllamaEmbeddings-N24Tcœ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}",
+        "target": "Chroma-tsajj",
+        "targetHandle": "{œfieldNameœ:œembeddingœ,œidœ:œChroma-tsajjœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "Chroma",
+            "id": "Chroma-tsajj",
+            "name": "search_results",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_data",
+            "id": "TypeConverterComponent-FLua9",
+            "inputTypes": [
+              "Message",
+              "Data",
+              "DataFrame"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__Chroma-tsajj{œdataTypeœ:œChromaœ,œidœ:œChroma-tsajjœ,œnameœ:œsearch_resultsœ,œoutput_typesœ:[œDataœ]}-TypeConverterComponent-FLua9{œfieldNameœ:œinput_dataœ,œidœ:œTypeConverterComponent-FLua9œ,œinputTypesœ:[œMessageœ,œDataœ,œDataFrameœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "Chroma-tsajj",
+        "sourceHandle": "{œdataTypeœ:œChromaœ,œidœ:œChroma-tsajjœ,œnameœ:œsearch_resultsœ,œoutput_typesœ:[œDataœ]}",
+        "target": "TypeConverterComponent-FLua9",
+        "targetHandle": "{œfieldNameœ:œinput_dataœ,œidœ:œTypeConverterComponent-FLua9œ,œinputTypesœ:[œMessageœ,œDataœ,œDataFrameœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "TypeConverterComponent",
+            "id": "TypeConverterComponent-FLua9",
+            "name": "message_output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "context",
+            "id": "Prompt Template-EyNOn",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__TypeConverterComponent-FLua9{œdataTypeœ:œTypeConverterComponentœ,œidœ:œTypeConverterComponent-FLua9œ,œnameœ:œmessage_outputœ,œoutput_typesœ:[œMessageœ]}-Prompt Template-EyNOn{œfieldNameœ:œcontextœ,œidœ:œPrompt Template-EyNOnœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "TypeConverterComponent-FLua9",
+        "sourceHandle": "{œdataTypeœ:œTypeConverterComponentœ,œidœ:œTypeConverterComponent-FLua9œ,œnameœ:œmessage_outputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Prompt Template-EyNOn",
+        "targetHandle": "{œfieldNameœ:œcontextœ,œidœ:œPrompt Template-EyNOnœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "Prompt Template",
+            "id": "Prompt Template-EyNOn",
+            "name": "prompt",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "system_message",
+            "id": "OllamaModel-ByKDI",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__Prompt Template-EyNOn{œdataTypeœ:œPrompt Templateœ,œidœ:œPrompt Template-EyNOnœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-OllamaModel-ByKDI{œfieldNameœ:œsystem_messageœ,œidœ:œOllamaModel-ByKDIœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "Prompt Template-EyNOn",
+        "sourceHandle": "{œdataTypeœ:œPrompt Templateœ,œidœ:œPrompt Template-EyNOnœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "OllamaModel-ByKDI",
+        "targetHandle": "{œfieldNameœ:œsystem_messageœ,œidœ:œOllamaModel-ByKDIœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "OllamaModel",
+            "id": "OllamaModel-ByKDI",
+            "name": "text_output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "TextOutput-i6tTx",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__OllamaModel-ByKDI{œdataTypeœ:œOllamaModelœ,œidœ:œOllamaModel-ByKDIœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}-TextOutput-i6tTx{œfieldNameœ:œinput_valueœ,œidœ:œTextOutput-i6tTxœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "OllamaModel-ByKDI",
+        "sourceHandle": "{œdataTypeœ:œOllamaModelœ,œidœ:œOllamaModel-ByKDIœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "TextOutput-i6tTx",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œTextOutput-i6tTxœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "TextInput",
+            "id": "TextInput-l3GNZ",
+            "name": "text",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "search_query",
+            "id": "Chroma-tsajj",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "query"
+          }
+        },
+        "id": "xy-edge__TextInput-l3GNZ{œdataTypeœ:œTextInputœ,œidœ:œTextInput-l3GNZœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}-Chroma-tsajj{œfieldNameœ:œsearch_queryœ,œidœ:œChroma-tsajjœ,œinputTypesœ:[œMessageœ],œtypeœ:œqueryœ}",
+        "selected": false,
+        "source": "TextInput-l3GNZ",
+        "sourceHandle": "{œdataTypeœ:œTextInputœ,œidœ:œTextInput-l3GNZœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Chroma-tsajj",
+        "targetHandle": "{œfieldNameœ:œsearch_queryœ,œidœ:œChroma-tsajjœ,œinputTypesœ:[œMessageœ],œtypeœ:œqueryœ}"
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "id": "OllamaEmbeddings-N24Tc",
+          "node": {
+            "base_classes": [
+              "Embeddings"
+            ],
+            "beta": false,
+            "category": "ollama",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Generate embeddings using Ollama models.",
+            "display_name": "Ollama Embeddings",
+            "documentation": "https://python.langchain.com/docs/integrations/text_embedding/ollama",
+            "edited": false,
+            "field_order": [
+              "model_name",
+              "base_url"
+            ],
+            "frozen": false,
+            "icon": "Ollama",
+            "key": "OllamaEmbeddings",
+            "last_updated": "2025-11-10T10:26:07.890Z",
+            "legacy": false,
+            "lf_version": "1.5.1",
+            "metadata": {
+              "keywords": [
+                "model",
+                "llm",
+                "language model",
+                "large language model"
+              ]
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Embeddings",
+                "group_outputs": false,
+                "method": "build_embeddings",
+                "name": "embeddings",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Embeddings",
+                "tool_mode": true,
+                "types": [
+                  "Embeddings"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 1.680506611692e-18,
+            "template": {
+              "_type": "Component",
+              "base_url": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Ollama Base URL",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "base_url",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "http://localhost:11434"
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from typing import Any\nfrom urllib.parse import urljoin\n\nimport httpx\nfrom langchain_ollama import OllamaEmbeddings\n\nfrom langflow.base.models.model import LCModelComponent\nfrom langflow.base.models.ollama_constants import OLLAMA_EMBEDDING_MODELS, URL_LIST\nfrom langflow.field_typing import Embeddings\nfrom langflow.io import DropdownInput, MessageTextInput, Output\n\nHTTP_STATUS_OK = 200\n\n\nclass OllamaEmbeddingsComponent(LCModelComponent):\n    display_name: str = \"Ollama Embeddings\"\n    description: str = \"Generate embeddings using Ollama models.\"\n    documentation = \"https://python.langchain.com/docs/integrations/text_embedding/ollama\"\n    icon = \"Ollama\"\n    name = \"OllamaEmbeddings\"\n\n    inputs = [\n        DropdownInput(\n            name=\"model_name\",\n            display_name=\"Ollama Model\",\n            value=\"\",\n            options=[],\n            real_time_refresh=True,\n            refresh_button=True,\n            combobox=True,\n            required=True,\n        ),\n        MessageTextInput(\n            name=\"base_url\",\n            display_name=\"Ollama Base URL\",\n            value=\"\",\n            required=True,\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Embeddings\", name=\"embeddings\", method=\"build_embeddings\"),\n    ]\n\n    def build_embeddings(self) -> Embeddings:\n        try:\n            output = OllamaEmbeddings(model=self.model_name, base_url=self.base_url)\n        except Exception as e:\n            msg = (\n                \"Unable to connect to the Ollama API. \",\n                \"Please verify the base URL, ensure the relevant Ollama model is pulled, and try again.\",\n            )\n            raise ValueError(msg) from e\n        return output\n\n    async def update_build_config(self, build_config: dict, field_value: Any, field_name: str | None = None):\n        if field_name in {\"base_url\", \"model_name\"} and not await self.is_valid_ollama_url(field_value):\n            # Check if any URL in the list is valid\n            valid_url = \"\"\n            for url in URL_LIST:\n                if await self.is_valid_ollama_url(url):\n                    valid_url = url\n                    break\n            build_config[\"base_url\"][\"value\"] = valid_url\n        if field_name in {\"model_name\", \"base_url\", \"tool_model_enabled\"}:\n            if await self.is_valid_ollama_url(self.base_url):\n                build_config[\"model_name\"][\"options\"] = await self.get_model(self.base_url)\n            elif await self.is_valid_ollama_url(build_config[\"base_url\"].get(\"value\", \"\")):\n                build_config[\"model_name\"][\"options\"] = await self.get_model(build_config[\"base_url\"].get(\"value\", \"\"))\n            else:\n                build_config[\"model_name\"][\"options\"] = []\n\n        return build_config\n\n    async def get_model(self, base_url_value: str) -> list[str]:\n        \"\"\"Get the model names from Ollama.\"\"\"\n        model_ids = []\n        try:\n            url = urljoin(base_url_value, \"/api/tags\")\n            async with httpx.AsyncClient() as client:\n                response = await client.get(url)\n                response.raise_for_status()\n                data = response.json()\n\n            model_ids = [model[\"name\"] for model in data.get(\"models\", [])]\n            # this to ensure that not embedding models are included.\n            # not even the base models since models can have 1b 2b etc\n            # handles cases when embeddings models have tags like :latest - etc.\n            model_ids = [\n                model\n                for model in model_ids\n                if any(model.startswith(f\"{embedding_model}\") for embedding_model in OLLAMA_EMBEDDING_MODELS)\n            ]\n\n        except (ImportError, ValueError, httpx.RequestError) as e:\n            msg = \"Could not get model names from Ollama.\"\n            raise ValueError(msg) from e\n\n        return model_ids\n\n    async def is_valid_ollama_url(self, url: str) -> bool:\n        try:\n            async with httpx.AsyncClient() as client:\n                return (await client.get(f\"{url}/api/tags\")).status_code == HTTP_STATUS_OK\n        except httpx.RequestError:\n            return False\n"
+              },
+              "model_name": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": true,
+                "dialog_inputs": {},
+                "display_name": "Ollama Model",
+                "dynamic": false,
+                "info": "",
+                "name": "model_name",
+                "options": [
+                  "nomic-embed-text:latest"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "refresh_button": true,
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "nomic-embed-text:latest"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "OllamaEmbeddings"
+        },
+        "dragging": false,
+        "id": "OllamaEmbeddings-N24Tc",
+        "measured": {
+          "height": 286,
+          "width": 320
+        },
+        "position": {
+          "x": 78.03185365156517,
+          "y": 660.1421898640552
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "Chroma-tsajj",
+          "node": {
+            "base_classes": [
+              "Data",
+              "DataFrame"
+            ],
+            "beta": false,
+            "category": "vectorstores",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Chroma Vector Store with search capabilities",
+            "display_name": "Chroma DB",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "collection_name",
+              "persist_directory",
+              "ingest_data",
+              "search_query",
+              "should_cache_vector_store",
+              "embedding",
+              "chroma_server_cors_allow_origins",
+              "chroma_server_host",
+              "chroma_server_http_port",
+              "chroma_server_grpc_port",
+              "chroma_server_ssl_enabled",
+              "allow_duplicates",
+              "search_type",
+              "number_of_results",
+              "limit"
+            ],
+            "frozen": false,
+            "icon": "Chroma",
+            "key": "Chroma",
+            "legacy": false,
+            "lf_version": "1.5.1",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Search Results",
+                "group_outputs": false,
+                "method": "search_documents",
+                "name": "search_results",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "DataFrame",
+                "group_outputs": false,
+                "method": "as_dataframe",
+                "name": "dataframe",
+                "tool_mode": true,
+                "types": [
+                  "DataFrame"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 0.0004518559443749226,
+            "template": {
+              "_type": "Component",
+              "allow_duplicates": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Allow Duplicates",
+                "dynamic": false,
+                "info": "If false, will not add documents that are already in the Vector Store.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "allow_duplicates",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "chroma_server_cors_allow_origins": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "display_name": "Server CORS Allow Origins",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "chroma_server_cors_allow_origins",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "chroma_server_grpc_port": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Server gRPC Port",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "chroma_server_grpc_port",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "chroma_server_host": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "display_name": "Server Host",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "chroma_server_host",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "chroma_server_http_port": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Server HTTP Port",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "chroma_server_http_port",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "chroma_server_ssl_enabled": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Server SSL Enabled",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "chroma_server_ssl_enabled",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from copy import deepcopy\nfrom typing import TYPE_CHECKING\n\nfrom chromadb.config import Settings\nfrom langchain_chroma import Chroma\nfrom typing_extensions import override\n\nfrom langflow.base.vectorstores.model import LCVectorStoreComponent, check_cached_vector_store\nfrom langflow.base.vectorstores.utils import chroma_collection_to_data\nfrom langflow.inputs.inputs import BoolInput, DropdownInput, HandleInput, IntInput, StrInput\nfrom langflow.schema.data import Data\n\nif TYPE_CHECKING:\n    from langflow.schema.dataframe import DataFrame\n\n\nclass ChromaVectorStoreComponent(LCVectorStoreComponent):\n    \"\"\"Chroma Vector Store with search capabilities.\"\"\"\n\n    display_name: str = \"Chroma DB\"\n    description: str = \"Chroma Vector Store with search capabilities\"\n    name = \"Chroma\"\n    icon = \"Chroma\"\n\n    inputs = [\n        StrInput(\n            name=\"collection_name\",\n            display_name=\"Collection Name\",\n            value=\"langflow\",\n        ),\n        StrInput(\n            name=\"persist_directory\",\n            display_name=\"Persist Directory\",\n        ),\n        *LCVectorStoreComponent.inputs,\n        HandleInput(name=\"embedding\", display_name=\"Embedding\", input_types=[\"Embeddings\"]),\n        StrInput(\n            name=\"chroma_server_cors_allow_origins\",\n            display_name=\"Server CORS Allow Origins\",\n            advanced=True,\n        ),\n        StrInput(\n            name=\"chroma_server_host\",\n            display_name=\"Server Host\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"chroma_server_http_port\",\n            display_name=\"Server HTTP Port\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"chroma_server_grpc_port\",\n            display_name=\"Server gRPC Port\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"chroma_server_ssl_enabled\",\n            display_name=\"Server SSL Enabled\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"allow_duplicates\",\n            display_name=\"Allow Duplicates\",\n            advanced=True,\n            info=\"If false, will not add documents that are already in the Vector Store.\",\n        ),\n        DropdownInput(\n            name=\"search_type\",\n            display_name=\"Search Type\",\n            options=[\"Similarity\", \"MMR\"],\n            value=\"Similarity\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"number_of_results\",\n            display_name=\"Number of Results\",\n            info=\"Number of results to return.\",\n            advanced=True,\n            value=10,\n        ),\n        IntInput(\n            name=\"limit\",\n            display_name=\"Limit\",\n            advanced=True,\n            info=\"Limit the number of records to compare when Allow Duplicates is False.\",\n        ),\n    ]\n\n    @override\n    @check_cached_vector_store\n    def build_vector_store(self) -> Chroma:\n        \"\"\"Builds the Chroma object.\"\"\"\n        try:\n            from chromadb import Client\n            from langchain_chroma import Chroma\n        except ImportError as e:\n            msg = \"Could not import Chroma integration package. Please install it with `pip install langchain-chroma`.\"\n            raise ImportError(msg) from e\n        # Chroma settings\n        chroma_settings = None\n        client = None\n        if self.chroma_server_host:\n            chroma_settings = Settings(\n                chroma_server_cors_allow_origins=self.chroma_server_cors_allow_origins or [],\n                chroma_server_host=self.chroma_server_host,\n                chroma_server_http_port=self.chroma_server_http_port or None,\n                chroma_server_grpc_port=self.chroma_server_grpc_port or None,\n                chroma_server_ssl_enabled=self.chroma_server_ssl_enabled,\n            )\n            client = Client(settings=chroma_settings)\n\n        # Check persist_directory and expand it if it is a relative path\n        persist_directory = self.resolve_path(self.persist_directory) if self.persist_directory is not None else None\n\n        chroma = Chroma(\n            persist_directory=persist_directory,\n            client=client,\n            embedding_function=self.embedding,\n            collection_name=self.collection_name,\n        )\n\n        self._add_documents_to_vector_store(chroma)\n        self.status = chroma_collection_to_data(chroma.get(limit=self.limit))\n        return chroma\n\n    def _add_documents_to_vector_store(self, vector_store: \"Chroma\") -> None:\n        \"\"\"Adds documents to the Vector Store.\"\"\"\n        ingest_data: list | Data | DataFrame = self.ingest_data\n        if not ingest_data:\n            self.status = \"\"\n            return\n\n        # Convert DataFrame to Data if needed using parent's method\n        ingest_data = self._prepare_ingest_data()\n\n        stored_documents_without_id = []\n        if self.allow_duplicates:\n            stored_data = []\n        else:\n            stored_data = chroma_collection_to_data(vector_store.get(limit=self.limit))\n            for value in deepcopy(stored_data):\n                del value.id\n                stored_documents_without_id.append(value)\n\n        documents = []\n        for _input in ingest_data or []:\n            if isinstance(_input, Data):\n                if _input not in stored_documents_without_id:\n                    documents.append(_input.to_lc_document())\n            else:\n                msg = \"Vector Store Inputs must be Data objects.\"\n                raise TypeError(msg)\n\n        if documents and self.embedding is not None:\n            self.log(f\"Adding {len(documents)} documents to the Vector Store.\")\n            vector_store.add_documents(documents)\n        else:\n            self.log(\"No documents to add to the Vector Store.\")\n"
+              },
+              "collection_name": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "Collection Name",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "collection_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "sites"
+              },
+              "embedding": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Embedding",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Embeddings"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "embedding",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "ingest_data": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Ingest Data",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Data",
+                  "DataFrame"
+                ],
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "ingest_data",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "limit": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Limit",
+                "dynamic": false,
+                "info": "Limit the number of records to compare when Allow Duplicates is False.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "limit",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "number_of_results": {
+                "_input_type": "IntInput",
+                "advanced": false,
+                "display_name": "Number of Results",
+                "dynamic": false,
+                "info": "Number of results to return.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "number_of_results",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": 10
+              },
+              "persist_directory": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "Persist Directory",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "persist_directory",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "search_query": {
+                "_input_type": "QueryInput",
+                "advanced": false,
+                "display_name": "Search Query",
+                "dynamic": false,
+                "info": "Enter a query to run a similarity search.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "search_query",
+                "placeholder": "Enter a query...",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "query",
+                "value": ""
+              },
+              "search_type": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Search Type",
+                "dynamic": false,
+                "info": "",
+                "name": "search_type",
+                "options": [
+                  "Similarity",
+                  "MMR"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "Similarity"
+              },
+              "should_cache_vector_store": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Cache Vector Store",
+                "dynamic": false,
+                "info": "If True, the vector store will be cached for the current build of the component. This is useful for components that have multiple output methods and want to share the same vector store.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "should_cache_vector_store",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "search_results",
+          "showNode": true,
+          "type": "Chroma"
+        },
+        "dragging": false,
+        "id": "Chroma-tsajj",
+        "measured": {
+          "height": 623,
+          "width": 320
+        },
+        "position": {
+          "x": 846.4828889424244,
+          "y": 232.6995951688374
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "OllamaModel-ByKDI",
+          "node": {
+            "base_classes": [
+              "LanguageModel",
+              "Message"
+            ],
+            "beta": false,
+            "category": "ollama",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Generate text using Ollama Local LLMs.",
+            "display_name": "Ollama",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "base_url",
+              "model_name",
+              "temperature",
+              "format",
+              "metadata",
+              "mirostat",
+              "mirostat_eta",
+              "mirostat_tau",
+              "num_ctx",
+              "num_gpu",
+              "num_thread",
+              "repeat_last_n",
+              "repeat_penalty",
+              "tfs_z",
+              "timeout",
+              "top_k",
+              "top_p",
+              "verbose",
+              "tags",
+              "stop_tokens",
+              "system",
+              "tool_model_enabled",
+              "template",
+              "input_value",
+              "system_message",
+              "stream"
+            ],
+            "frozen": false,
+            "icon": "Ollama",
+            "key": "OllamaModel",
+            "last_updated": "2025-11-10T14:41:04.501Z",
+            "legacy": false,
+            "lf_version": "1.5.1",
+            "metadata": {
+              "keywords": [
+                "model",
+                "llm",
+                "language model",
+                "large language model"
+              ]
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Model Response",
+                "group_outputs": false,
+                "method": "text_response",
+                "name": "text_output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Language Model",
+                "group_outputs": false,
+                "method": "build_model",
+                "name": "model_output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "LanguageModel",
+                "tool_mode": true,
+                "types": [
+                  "LanguageModel"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 5.185853433287903e-7,
+            "template": {
+              "_type": "Component",
+              "base_url": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Base URL",
+                "dynamic": false,
+                "info": "Endpoint of the Ollama API.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "base_url",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "http://localhost:11434"
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import asyncio\nfrom typing import Any\nfrom urllib.parse import urljoin\n\nimport httpx\nfrom langchain_ollama import ChatOllama\n\nfrom langflow.base.models.model import LCModelComponent\nfrom langflow.base.models.ollama_constants import URL_LIST\nfrom langflow.field_typing import LanguageModel\nfrom langflow.field_typing.range_spec import RangeSpec\nfrom langflow.io import BoolInput, DictInput, DropdownInput, FloatInput, IntInput, MessageTextInput, SliderInput\nfrom langflow.logging import logger\n\nHTTP_STATUS_OK = 200\n\n\nclass ChatOllamaComponent(LCModelComponent):\n    display_name = \"Ollama\"\n    description = \"Generate text using Ollama Local LLMs.\"\n    icon = \"Ollama\"\n    name = \"OllamaModel\"\n\n    # Define constants for JSON keys\n    JSON_MODELS_KEY = \"models\"\n    JSON_NAME_KEY = \"name\"\n    JSON_CAPABILITIES_KEY = \"capabilities\"\n    DESIRED_CAPABILITY = \"completion\"\n    TOOL_CALLING_CAPABILITY = \"tools\"\n\n    inputs = [\n        MessageTextInput(\n            name=\"base_url\",\n            display_name=\"Base URL\",\n            info=\"Endpoint of the Ollama API.\",\n            value=\"\",\n        ),\n        DropdownInput(\n            name=\"model_name\",\n            display_name=\"Model Name\",\n            options=[],\n            info=\"Refer to https://ollama.com/library for more models.\",\n            refresh_button=True,\n            real_time_refresh=True,\n        ),\n        SliderInput(\n            name=\"temperature\",\n            display_name=\"Temperature\",\n            value=0.1,\n            range_spec=RangeSpec(min=0, max=1, step=0.01),\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"format\", display_name=\"Format\", info=\"Specify the format of the output (e.g., json).\", advanced=True\n        ),\n        DictInput(name=\"metadata\", display_name=\"Metadata\", info=\"Metadata to add to the run trace.\", advanced=True),\n        DropdownInput(\n            name=\"mirostat\",\n            display_name=\"Mirostat\",\n            options=[\"Disabled\", \"Mirostat\", \"Mirostat 2.0\"],\n            info=\"Enable/disable Mirostat sampling for controlling perplexity.\",\n            value=\"Disabled\",\n            advanced=True,\n            real_time_refresh=True,\n        ),\n        FloatInput(\n            name=\"mirostat_eta\",\n            display_name=\"Mirostat Eta\",\n            info=\"Learning rate for Mirostat algorithm. (Default: 0.1)\",\n            advanced=True,\n        ),\n        FloatInput(\n            name=\"mirostat_tau\",\n            display_name=\"Mirostat Tau\",\n            info=\"Controls the balance between coherence and diversity of the output. (Default: 5.0)\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"num_ctx\",\n            display_name=\"Context Window Size\",\n            info=\"Size of the context window for generating tokens. (Default: 2048)\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"num_gpu\",\n            display_name=\"Number of GPUs\",\n            info=\"Number of GPUs to use for computation. (Default: 1 on macOS, 0 to disable)\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"num_thread\",\n            display_name=\"Number of Threads\",\n            info=\"Number of threads to use during computation. (Default: detected for optimal performance)\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"repeat_last_n\",\n            display_name=\"Repeat Last N\",\n            info=\"How far back the model looks to prevent repetition. (Default: 64, 0 = disabled, -1 = num_ctx)\",\n            advanced=True,\n        ),\n        FloatInput(\n            name=\"repeat_penalty\",\n            display_name=\"Repeat Penalty\",\n            info=\"Penalty for repetitions in generated text. (Default: 1.1)\",\n            advanced=True,\n        ),\n        FloatInput(name=\"tfs_z\", display_name=\"TFS Z\", info=\"Tail free sampling value. (Default: 1)\", advanced=True),\n        IntInput(name=\"timeout\", display_name=\"Timeout\", info=\"Timeout for the request stream.\", advanced=True),\n        IntInput(\n            name=\"top_k\", display_name=\"Top K\", info=\"Limits token selection to top K. (Default: 40)\", advanced=True\n        ),\n        FloatInput(name=\"top_p\", display_name=\"Top P\", info=\"Works together with top-k. (Default: 0.9)\", advanced=True),\n        BoolInput(name=\"verbose\", display_name=\"Verbose\", info=\"Whether to print out response text.\", advanced=True),\n        MessageTextInput(\n            name=\"tags\",\n            display_name=\"Tags\",\n            info=\"Comma-separated list of tags to add to the run trace.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"stop_tokens\",\n            display_name=\"Stop Tokens\",\n            info=\"Comma-separated list of tokens to signal the model to stop generating text.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"system\", display_name=\"System\", info=\"System to use for generating text.\", advanced=True\n        ),\n        BoolInput(\n            name=\"tool_model_enabled\",\n            display_name=\"Tool Model Enabled\",\n            info=\"Whether to enable tool calling in the model.\",\n            value=True,\n            real_time_refresh=True,\n        ),\n        MessageTextInput(\n            name=\"template\", display_name=\"Template\", info=\"Template to use for generating text.\", advanced=True\n        ),\n        *LCModelComponent._base_inputs,\n    ]\n\n    def build_model(self) -> LanguageModel:  # type: ignore[type-var]\n        # Mapping mirostat settings to their corresponding values\n        mirostat_options = {\"Mirostat\": 1, \"Mirostat 2.0\": 2}\n\n        # Default to 0 for 'Disabled'\n        mirostat_value = mirostat_options.get(self.mirostat, 0)\n\n        # Set mirostat_eta and mirostat_tau to None if mirostat is disabled\n        if mirostat_value == 0:\n            mirostat_eta = None\n            mirostat_tau = None\n        else:\n            mirostat_eta = self.mirostat_eta\n            mirostat_tau = self.mirostat_tau\n\n        # Mapping system settings to their corresponding values\n        llm_params = {\n            \"base_url\": self.base_url,\n            \"model\": self.model_name,\n            \"mirostat\": mirostat_value,\n            \"format\": self.format,\n            \"metadata\": self.metadata,\n            \"tags\": self.tags.split(\",\") if self.tags else None,\n            \"mirostat_eta\": mirostat_eta,\n            \"mirostat_tau\": mirostat_tau,\n            \"num_ctx\": self.num_ctx or None,\n            \"num_gpu\": self.num_gpu or None,\n            \"num_thread\": self.num_thread or None,\n            \"repeat_last_n\": self.repeat_last_n or None,\n            \"repeat_penalty\": self.repeat_penalty or None,\n            \"temperature\": self.temperature or None,\n            \"stop\": self.stop_tokens.split(\",\") if self.stop_tokens else None,\n            \"system\": self.system,\n            \"tfs_z\": self.tfs_z or None,\n            \"timeout\": self.timeout or None,\n            \"top_k\": self.top_k or None,\n            \"top_p\": self.top_p or None,\n            \"verbose\": self.verbose,\n            \"template\": self.template,\n        }\n\n        # Remove parameters with None values\n        llm_params = {k: v for k, v in llm_params.items() if v is not None}\n\n        try:\n            output = ChatOllama(**llm_params)\n        except Exception as e:\n            msg = (\n                \"Unable to connect to the Ollama API. \",\n                \"Please verify the base URL, ensure the relevant Ollama model is pulled, and try again.\",\n            )\n            raise ValueError(msg) from e\n\n        return output\n\n    async def is_valid_ollama_url(self, url: str) -> bool:\n        try:\n            async with httpx.AsyncClient() as client:\n                return (await client.get(urljoin(url, \"api/tags\"))).status_code == HTTP_STATUS_OK\n        except httpx.RequestError:\n            return False\n\n    async def update_build_config(self, build_config: dict, field_value: Any, field_name: str | None = None):\n        if field_name == \"mirostat\":\n            if field_value == \"Disabled\":\n                build_config[\"mirostat_eta\"][\"advanced\"] = True\n                build_config[\"mirostat_tau\"][\"advanced\"] = True\n                build_config[\"mirostat_eta\"][\"value\"] = None\n                build_config[\"mirostat_tau\"][\"value\"] = None\n\n            else:\n                build_config[\"mirostat_eta\"][\"advanced\"] = False\n                build_config[\"mirostat_tau\"][\"advanced\"] = False\n\n                if field_value == \"Mirostat 2.0\":\n                    build_config[\"mirostat_eta\"][\"value\"] = 0.2\n                    build_config[\"mirostat_tau\"][\"value\"] = 10\n                else:\n                    build_config[\"mirostat_eta\"][\"value\"] = 0.1\n                    build_config[\"mirostat_tau\"][\"value\"] = 5\n\n        if field_name in {\"base_url\", \"model_name\"}:\n            if build_config[\"base_url\"].get(\"load_from_db\", False):\n                base_url_value = await self.get_variables(build_config[\"base_url\"].get(\"value\", \"\"), \"base_url\")\n            else:\n                base_url_value = build_config[\"base_url\"].get(\"value\", \"\")\n\n            if not await self.is_valid_ollama_url(base_url_value):\n                # Check if any URL in the list is valid\n                valid_url = \"\"\n                check_urls = URL_LIST\n                if self.base_url:\n                    check_urls = [self.base_url, *URL_LIST]\n                for url in check_urls:\n                    if await self.is_valid_ollama_url(url):\n                        valid_url = url\n                        break\n                if valid_url != \"\":\n                    build_config[\"base_url\"][\"value\"] = valid_url\n                else:\n                    msg = \"No valid Ollama URL found.\"\n                    raise ValueError(msg)\n        if field_name in {\"model_name\", \"base_url\", \"tool_model_enabled\"}:\n            if await self.is_valid_ollama_url(self.base_url):\n                tool_model_enabled = build_config[\"tool_model_enabled\"].get(\"value\", False) or self.tool_model_enabled\n                build_config[\"model_name\"][\"options\"] = await self.get_models(self.base_url, tool_model_enabled)\n            elif await self.is_valid_ollama_url(build_config[\"base_url\"].get(\"value\", \"\")):\n                tool_model_enabled = build_config[\"tool_model_enabled\"].get(\"value\", False) or self.tool_model_enabled\n                build_config[\"model_name\"][\"options\"] = await self.get_models(\n                    build_config[\"base_url\"].get(\"value\", \"\"), tool_model_enabled\n                )\n            else:\n                build_config[\"model_name\"][\"options\"] = []\n        if field_name == \"keep_alive_flag\":\n            if field_value == \"Keep\":\n                build_config[\"keep_alive\"][\"value\"] = \"-1\"\n                build_config[\"keep_alive\"][\"advanced\"] = True\n            elif field_value == \"Immediately\":\n                build_config[\"keep_alive\"][\"value\"] = \"0\"\n                build_config[\"keep_alive\"][\"advanced\"] = True\n            else:\n                build_config[\"keep_alive\"][\"advanced\"] = False\n\n        return build_config\n\n    async def get_models(self, base_url_value: str, tool_model_enabled: bool | None = None) -> list[str]:\n        \"\"\"Fetches a list of models from the Ollama API that do not have the \"embedding\" capability.\n\n        Args:\n            base_url_value (str): The base URL of the Ollama API.\n            tool_model_enabled (bool | None, optional): If True, filters the models further to include\n                only those that support tool calling. Defaults to None.\n\n        Returns:\n            list[str]: A list of model names that do not have the \"embedding\" capability. If\n                `tool_model_enabled` is True, only models supporting tool calling are included.\n\n        Raises:\n            ValueError: If there is an issue with the API request or response, or if the model\n                names cannot be retrieved.\n        \"\"\"\n        try:\n            # Normalize the base URL to avoid the repeated \"/\" at the end\n            base_url = base_url_value.rstrip(\"/\") + \"/\"\n\n            # Ollama REST API to return models\n            tags_url = urljoin(base_url, \"api/tags\")\n\n            # Ollama REST API to return model capabilities\n            show_url = urljoin(base_url, \"api/show\")\n\n            async with httpx.AsyncClient() as client:\n                # Fetch available models\n                tags_response = await client.get(tags_url)\n                tags_response.raise_for_status()\n                models = tags_response.json()\n                if asyncio.iscoroutine(models):\n                    models = await models\n                logger.debug(f\"Available models: {models}\")\n\n                # Filter models that are NOT embedding models\n                model_ids = []\n                for model in models[self.JSON_MODELS_KEY]:\n                    model_name = model[self.JSON_NAME_KEY]\n                    logger.debug(f\"Checking model: {model_name}\")\n\n                    payload = {\"model\": model_name}\n                    show_response = await client.post(show_url, json=payload)\n                    show_response.raise_for_status()\n                    json_data = show_response.json()\n                    if asyncio.iscoroutine(json_data):\n                        json_data = await json_data\n                    capabilities = json_data.get(self.JSON_CAPABILITIES_KEY, [])\n                    logger.debug(f\"Model: {model_name}, Capabilities: {capabilities}\")\n\n                    if self.DESIRED_CAPABILITY in capabilities and (\n                        not tool_model_enabled or self.TOOL_CALLING_CAPABILITY in capabilities\n                    ):\n                        model_ids.append(model_name)\n\n        except (httpx.RequestError, ValueError) as e:\n            msg = \"Could not get model names from Ollama.\"\n            raise ValueError(msg) from e\n\n        return model_ids\n"
+              },
+              "format": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Format",
+                "dynamic": false,
+                "info": "Specify the format of the output (e.g., json).",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "format",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "json"
+              },
+              "input_value": {
+                "_input_type": "MessageInput",
+                "advanced": false,
+                "display_name": "Input",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "metadata": {
+                "_input_type": "DictInput",
+                "advanced": true,
+                "display_name": "Metadata",
+                "dynamic": false,
+                "info": "Metadata to add to the run trace.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "metadata",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "dict",
+                "value": {}
+              },
+              "mirostat": {
+                "_input_type": "DropdownInput",
+                "advanced": true,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Mirostat",
+                "dynamic": false,
+                "info": "Enable/disable Mirostat sampling for controlling perplexity.",
+                "name": "mirostat",
+                "options": [
+                  "Disabled",
+                  "Mirostat",
+                  "Mirostat 2.0"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "Disabled"
+              },
+              "mirostat_eta": {
+                "_input_type": "FloatInput",
+                "advanced": true,
+                "display_name": "Mirostat Eta",
+                "dynamic": false,
+                "info": "Learning rate for Mirostat algorithm. (Default: 0.1)",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "mirostat_eta",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "float",
+                "value": ""
+              },
+              "mirostat_tau": {
+                "_input_type": "FloatInput",
+                "advanced": true,
+                "display_name": "Mirostat Tau",
+                "dynamic": false,
+                "info": "Controls the balance between coherence and diversity of the output. (Default: 5.0)",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "mirostat_tau",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "float",
+                "value": ""
+              },
+              "model_name": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Model Name",
+                "dynamic": false,
+                "info": "Refer to https://ollama.com/library for more models.",
+                "name": "model_name",
+                "options": [
+                  "qwen3-coder:30b",
+                  "qwen3-coder:480b-cloud"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "refresh_button": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "qwen3-coder:480b-cloud"
+              },
+              "num_ctx": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Context Window Size",
+                "dynamic": false,
+                "info": "Size of the context window for generating tokens. (Default: 2048)",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "num_ctx",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "num_gpu": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Number of GPUs",
+                "dynamic": false,
+                "info": "Number of GPUs to use for computation. (Default: 1 on macOS, 0 to disable)",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "num_gpu",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "num_thread": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Number of Threads",
+                "dynamic": false,
+                "info": "Number of threads to use during computation. (Default: detected for optimal performance)",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "num_thread",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "repeat_last_n": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Repeat Last N",
+                "dynamic": false,
+                "info": "How far back the model looks to prevent repetition. (Default: 64, 0 = disabled, -1 = num_ctx)",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "repeat_last_n",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "repeat_penalty": {
+                "_input_type": "FloatInput",
+                "advanced": true,
+                "display_name": "Repeat Penalty",
+                "dynamic": false,
+                "info": "Penalty for repetitions in generated text. (Default: 1.1)",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "repeat_penalty",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "float",
+                "value": ""
+              },
+              "stop_tokens": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Stop Tokens",
+                "dynamic": false,
+                "info": "Comma-separated list of tokens to signal the model to stop generating text.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "stop_tokens",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "stream": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Stream",
+                "dynamic": false,
+                "info": "Stream the response from the model. Streaming works only in Chat.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "stream",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "system": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "System",
+                "dynamic": false,
+                "info": "System to use for generating text.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "system",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "system_message": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "System Message",
+                "dynamic": false,
+                "info": "System message to pass to the model.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "system_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "tags": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Tags",
+                "dynamic": false,
+                "info": "Comma-separated list of tags to add to the run trace.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "tags",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "temperature": {
+                "_input_type": "SliderInput",
+                "advanced": true,
+                "display_name": "Temperature",
+                "dynamic": false,
+                "info": "",
+                "max_label": "",
+                "max_label_icon": "",
+                "min_label": "",
+                "min_label_icon": "",
+                "name": "temperature",
+                "placeholder": "",
+                "range_spec": {
+                  "max": 1,
+                  "min": 0,
+                  "step": 0.01,
+                  "step_type": "float"
+                },
+                "required": false,
+                "show": true,
+                "slider_buttons": false,
+                "slider_buttons_options": [],
+                "slider_input": false,
+                "title_case": false,
+                "tool_mode": false,
+                "type": "slider",
+                "value": 0.1
+              },
+              "template": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Template",
+                "dynamic": false,
+                "info": "Template to use for generating text.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "template",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "tfs_z": {
+                "_input_type": "FloatInput",
+                "advanced": true,
+                "display_name": "TFS Z",
+                "dynamic": false,
+                "info": "Tail free sampling value. (Default: 1)",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "tfs_z",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "float",
+                "value": ""
+              },
+              "timeout": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Timeout",
+                "dynamic": false,
+                "info": "Timeout for the request stream.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "timeout",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "tool_model_enabled": {
+                "_input_type": "BoolInput",
+                "advanced": false,
+                "display_name": "Tool Model Enabled",
+                "dynamic": false,
+                "info": "Whether to enable tool calling in the model.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "tool_model_enabled",
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "top_k": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Top K",
+                "dynamic": false,
+                "info": "Limits token selection to top K. (Default: 40)",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "top_k",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "top_p": {
+                "_input_type": "FloatInput",
+                "advanced": true,
+                "display_name": "Top P",
+                "dynamic": false,
+                "info": "Works together with top-k. (Default: 0.9)",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "top_p",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "float",
+                "value": ""
+              },
+              "verbose": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Verbose",
+                "dynamic": false,
+                "info": "Whether to print out response text.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "verbose",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "text_output",
+          "showNode": true,
+          "type": "OllamaModel"
+        },
+        "dragging": false,
+        "id": "OllamaModel-ByKDI",
+        "measured": {
+          "height": 576,
+          "width": 320
+        },
+        "position": {
+          "x": 2151.290808943885,
+          "y": 489.3466624908867
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "Prompt Template-EyNOn",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {
+              "template": [
+                "context"
+              ]
+            },
+            "description": "Create a prompt template with dynamic variables.",
+            "display_name": "Prompt Template",
+            "documentation": "https://docs.langflow.org/components-prompts",
+            "edited": false,
+            "error": null,
+            "field_order": [
+              "template",
+              "tool_placeholder"
+            ],
+            "frozen": false,
+            "full_path": null,
+            "icon": "braces",
+            "is_composition": null,
+            "is_input": null,
+            "is_output": null,
+            "legacy": false,
+            "lf_version": "1.5.1",
+            "metadata": {},
+            "minimized": false,
+            "name": "",
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Prompt",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "build_prompt",
+                "name": "prompt",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "priority": 0,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.prompts.api_utils import process_prompt_template\nfrom langflow.custom.custom_component.component import Component\nfrom langflow.inputs.inputs import DefaultPromptField\nfrom langflow.io import MessageTextInput, Output, PromptInput\nfrom langflow.schema.message import Message\nfrom langflow.template.utils import update_template_values\n\n\nclass PromptComponent(Component):\n    display_name: str = \"Prompt Template\"\n    description: str = \"Create a prompt template with dynamic variables.\"\n    documentation: str = \"https://docs.langflow.org/components-prompts\"\n    icon = \"braces\"\n    trace_type = \"prompt\"\n    name = \"Prompt Template\"\n    priority = 0  # Set priority to 0 to make it appear first\n\n    inputs = [\n        PromptInput(name=\"template\", display_name=\"Template\"),\n        MessageTextInput(\n            name=\"tool_placeholder\",\n            display_name=\"Tool Placeholder\",\n            tool_mode=True,\n            advanced=True,\n            info=\"A placeholder input for tool mode.\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Prompt\", name=\"prompt\", method=\"build_prompt\"),\n    ]\n\n    async def build_prompt(self) -> Message:\n        prompt = Message.from_template(**self._attributes)\n        self.status = prompt.text\n        return prompt\n\n    def _update_template(self, frontend_node: dict):\n        prompt_template = frontend_node[\"template\"][\"template\"][\"value\"]\n        custom_fields = frontend_node[\"custom_fields\"]\n        frontend_node_template = frontend_node[\"template\"]\n        _ = process_prompt_template(\n            template=prompt_template,\n            name=\"template\",\n            custom_fields=custom_fields,\n            frontend_node_template=frontend_node_template,\n        )\n        return frontend_node\n\n    async def update_frontend_node(self, new_frontend_node: dict, current_frontend_node: dict):\n        \"\"\"This function is called after the code validation is done.\"\"\"\n        frontend_node = await super().update_frontend_node(new_frontend_node, current_frontend_node)\n        template = frontend_node[\"template\"][\"template\"][\"value\"]\n        # Kept it duplicated for backwards compatibility\n        _ = process_prompt_template(\n            template=template,\n            name=\"template\",\n            custom_fields=frontend_node[\"custom_fields\"],\n            frontend_node_template=frontend_node[\"template\"],\n        )\n        # Now that template is updated, we need to grab any values that were set in the current_frontend_node\n        # and update the frontend_node with those values\n        update_template_values(new_template=frontend_node, previous_template=current_frontend_node[\"template\"])\n        return frontend_node\n\n    def _get_fallback_input(self, **kwargs):\n        return DefaultPromptField(**kwargs)\n"
+              },
+              "context": {
+                "advanced": false,
+                "display_name": "context",
+                "dynamic": false,
+                "field_type": "str",
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "context",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "template": {
+                "_input_type": "PromptInput",
+                "advanced": false,
+                "display_name": "Template",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "template",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "prompt",
+                "value": "{context}\nUsing context from above, describe what this site is about"
+              },
+              "tool_placeholder": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Tool Placeholder",
+                "dynamic": false,
+                "info": "A placeholder input for tool mode.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "tool_placeholder",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "Prompt Template"
+        },
+        "dragging": false,
+        "id": "Prompt Template-EyNOn",
+        "measured": {
+          "height": 320,
+          "width": 320
+        },
+        "position": {
+          "x": 1679.11710731793,
+          "y": 422.9717793784952
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "TypeConverterComponent-FLua9",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "category": "processing",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Convert between different types (Message, Data, DataFrame)",
+            "display_name": "Type Convert",
+            "documentation": "https://docs.langflow.org/components-processing#type-convert",
+            "edited": false,
+            "field_order": [
+              "input_data",
+              "output_type"
+            ],
+            "frozen": false,
+            "icon": "repeat",
+            "key": "TypeConverterComponent",
+            "legacy": false,
+            "lf_version": "1.5.1",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Message Output",
+                "group_outputs": false,
+                "method": "convert_to_message",
+                "name": "message_output",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 0.008834292878014125,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from typing import Any\n\nfrom langflow.custom import Component\nfrom langflow.io import HandleInput, Output, TabInput\nfrom langflow.schema import Data, DataFrame, Message\n\n\ndef convert_to_message(v) -> Message:\n    \"\"\"Convert input to Message type.\n\n    Args:\n        v: Input to convert (Message, Data, DataFrame, or dict)\n\n    Returns:\n        Message: Converted Message object\n    \"\"\"\n    return v if isinstance(v, Message) else v.to_message()\n\n\ndef convert_to_data(v: DataFrame | Data | Message | dict) -> Data:\n    \"\"\"Convert input to Data type.\n\n    Args:\n        v: Input to convert (Message, Data, DataFrame, or dict)\n\n    Returns:\n        Data: Converted Data object\n    \"\"\"\n    if isinstance(v, dict):\n        return Data(v)\n    if isinstance(v, Message):\n        return v.to_data()\n    return v if isinstance(v, Data) else v.to_data()\n\n\ndef convert_to_dataframe(v: DataFrame | Data | Message | dict) -> DataFrame:\n    \"\"\"Convert input to DataFrame type.\n\n    Args:\n        v: Input to convert (Message, Data, DataFrame, or dict)\n\n    Returns:\n        DataFrame: Converted DataFrame object\n    \"\"\"\n    if isinstance(v, dict):\n        return DataFrame([v])\n    return v if isinstance(v, DataFrame) else v.to_dataframe()\n\n\nclass TypeConverterComponent(Component):\n    display_name = \"Type Convert\"\n    description = \"Convert between different types (Message, Data, DataFrame)\"\n    documentation: str = \"https://docs.langflow.org/components-processing#type-convert\"\n    icon = \"repeat\"\n\n    inputs = [\n        HandleInput(\n            name=\"input_data\",\n            display_name=\"Input\",\n            input_types=[\"Message\", \"Data\", \"DataFrame\"],\n            info=\"Accept Message, Data or DataFrame as input\",\n            required=True,\n        ),\n        TabInput(\n            name=\"output_type\",\n            display_name=\"Output Type\",\n            options=[\"Message\", \"Data\", \"DataFrame\"],\n            info=\"Select the desired output data type\",\n            real_time_refresh=True,\n            value=\"Message\",\n        ),\n    ]\n\n    outputs = [\n        Output(\n            display_name=\"Message Output\",\n            name=\"message_output\",\n            method=\"convert_to_message\",\n        )\n    ]\n\n    def update_outputs(self, frontend_node: dict, field_name: str, field_value: Any) -> dict:\n        \"\"\"Dynamically show only the relevant output based on the selected output type.\"\"\"\n        if field_name == \"output_type\":\n            # Start with empty outputs\n            frontend_node[\"outputs\"] = []\n\n            # Add only the selected output type\n            if field_value == \"Message\":\n                frontend_node[\"outputs\"].append(\n                    Output(\n                        display_name=\"Message Output\",\n                        name=\"message_output\",\n                        method=\"convert_to_message\",\n                    ).to_dict()\n                )\n            elif field_value == \"Data\":\n                frontend_node[\"outputs\"].append(\n                    Output(\n                        display_name=\"Data Output\",\n                        name=\"data_output\",\n                        method=\"convert_to_data\",\n                    ).to_dict()\n                )\n            elif field_value == \"DataFrame\":\n                frontend_node[\"outputs\"].append(\n                    Output(\n                        display_name=\"DataFrame Output\",\n                        name=\"dataframe_output\",\n                        method=\"convert_to_dataframe\",\n                    ).to_dict()\n                )\n\n        return frontend_node\n\n    def convert_to_message(self) -> Message:\n        \"\"\"Convert input to Message type.\"\"\"\n        input_value = self.input_data[0] if isinstance(self.input_data, list) else self.input_data\n\n        # Handle string input by converting to Message first\n        if isinstance(input_value, str):\n            input_value = Message(text=input_value)\n\n        result = convert_to_message(input_value)\n        self.status = result\n        return result\n\n    def convert_to_data(self) -> Data:\n        \"\"\"Convert input to Data type.\"\"\"\n        input_value = self.input_data[0] if isinstance(self.input_data, list) else self.input_data\n\n        # Handle string input by converting to Message first\n        if isinstance(input_value, str):\n            input_value = Message(text=input_value)\n\n        result = convert_to_data(input_value)\n        self.status = result\n        return result\n\n    def convert_to_dataframe(self) -> DataFrame:\n        \"\"\"Convert input to DataFrame type.\"\"\"\n        input_value = self.input_data[0] if isinstance(self.input_data, list) else self.input_data\n\n        # Handle string input by converting to Message first\n        if isinstance(input_value, str):\n            input_value = Message(text=input_value)\n\n        result = convert_to_dataframe(input_value)\n        self.status = result\n        return result\n"
+              },
+              "input_data": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Input",
+                "dynamic": false,
+                "info": "Accept Message, Data or DataFrame as input",
+                "input_types": [
+                  "Message",
+                  "Data",
+                  "DataFrame"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "input_data",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "output_type": {
+                "_input_type": "TabInput",
+                "advanced": false,
+                "display_name": "Output Type",
+                "dynamic": false,
+                "info": "Select the desired output data type",
+                "name": "output_type",
+                "options": [
+                  "Message",
+                  "Data",
+                  "DataFrame"
+                ],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "tab",
+                "value": "Message"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "TypeConverterComponent"
+        },
+        "dragging": false,
+        "id": "TypeConverterComponent-FLua9",
+        "measured": {
+          "height": 262,
+          "width": 320
+        },
+        "position": {
+          "x": 1290.1166816285916,
+          "y": 438.3604465293672
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "TextOutput-i6tTx",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Sends text output via API.",
+            "display_name": "Text Output",
+            "documentation": "https://docs.langflow.org/components-io#text-output",
+            "edited": false,
+            "field_order": [
+              "input_value"
+            ],
+            "frozen": false,
+            "icon": "type",
+            "legacy": false,
+            "lf_version": "1.5.1",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Output Text",
+                "group_outputs": false,
+                "method": "text_response",
+                "name": "text",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.io.text import TextComponent\nfrom langflow.io import MultilineInput, Output\nfrom langflow.schema.message import Message\n\n\nclass TextOutputComponent(TextComponent):\n    display_name = \"Text Output\"\n    description = \"Sends text output via API.\"\n    documentation: str = \"https://docs.langflow.org/components-io#text-output\"\n    icon = \"type\"\n    name = \"TextOutput\"\n\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"Inputs\",\n            info=\"Text to be passed as output.\",\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Output Text\", name=\"text\", method=\"text_response\"),\n    ]\n\n    def text_response(self) -> Message:\n        message = Message(\n            text=self.input_value,\n        )\n        self.status = self.input_value\n        return message\n"
+              },
+              "input_value": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Inputs",
+                "dynamic": false,
+                "info": "Text to be passed as output.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "TextOutput"
+        },
+        "id": "TextOutput-i6tTx",
+        "measured": {
+          "height": 204,
+          "width": 320
+        },
+        "position": {
+          "x": 2568.7475435980223,
+          "y": 959.0634931180009
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "TextInput-l3GNZ",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Get user text inputs.",
+            "display_name": "Text Input",
+            "documentation": "https://docs.langflow.org/components-io#text-input",
+            "edited": false,
+            "field_order": [
+              "input_value"
+            ],
+            "frozen": false,
+            "icon": "type",
+            "legacy": false,
+            "lf_version": "1.5.1",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Output Text",
+                "group_outputs": false,
+                "method": "text_response",
+                "name": "text",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.io.text import TextComponent\nfrom langflow.io import MultilineInput, Output\nfrom langflow.schema.message import Message\n\n\nclass TextInputComponent(TextComponent):\n    display_name = \"Text Input\"\n    description = \"Get user text inputs.\"\n    documentation: str = \"https://docs.langflow.org/components-io#text-input\"\n    icon = \"type\"\n    name = \"TextInput\"\n\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"Text\",\n            info=\"Text to be passed as input.\",\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Output Text\", name=\"text\", method=\"text_response\"),\n    ]\n\n    def text_response(self) -> Message:\n        return Message(\n            text=self.input_value,\n        )\n"
+              },
+              "input_value": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Text",
+                "dynamic": false,
+                "info": "Text to be passed as input.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "TextInput"
+        },
+        "dragging": false,
+        "id": "TextInput-l3GNZ",
+        "measured": {
+          "height": 204,
+          "width": 320
+        },
+        "position": {
+          "x": 37.780771130142824,
+          "y": 317.4184936826797
+        },
+        "selected": false,
+        "type": "genericNode"
+      }
+    ],
+    "viewport": {
+      "x": 54.228141881366696,
+      "y": 77.7767803127868,
+      "zoom": 0.5233312483359747
+    }
+  },
+  "description": "Use local Ollama to answer questions on data from ChromaDB vector store",
+  "endpoint_name": null,
+  "id": "9e7ba6bc-c5c9-4d5b-a6af-659558bcbc92",
+  "is_component": false,
+  "last_tested_version": "1.5.1",
+  "name": "OllamaWithEmbeddings-RAG",
+  "tags": []
+}
